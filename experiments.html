@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Just some experiments">
+
+    <title>Portfolio | Dorjé Pradhan</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        custom-box {
+            border: 2px solid black;
+            display: block;
+            padding: 8px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body> 
+    <header>
+        <nav> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Play</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+            </ul>
+        </nav>
+    </header> 
+
+    <main>
+        <section id="semantic-custom-element">
+        <h1>Semantic Custom Element</h1>
+        <custom-box>
+            <h2>Custom Box Element</h2>
+            <p>This is my CSS-only custom element! No JS here!</p>
+        </custom-box>
+
+        </section>
+
+        <section id="multimedia">
+            <h2>Multimedia</h2>
+            <article>
+                <h3>Video Example</h3>
+                <video controls width="320">
+                    <source src="media/sample-video.mp4" type="video/mp4" >
+                    <p>Your browser does not support the video tag.</p>
+                </video>
+            </article>
+
+            <article>
+                <h3>SVG Example</h3>
+                <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="3" fill="lightblue" />
+                </svg>
+            </article>
+        </section>
+
+        <hr>
+
+        <section id="canvas-demo">
+            <h2>Canvas Example</h2>
+            <canvas id="demoCanvas" width="200" height="200"></canvas>
+            <script>
+                const c = document.getElementById("demoCanvas");
+                const ctx = c.getContext("2d");
+                ctx.fillStyle = "lightgray";
+                ctx.fillRect(0, 0, 200, 200);
+                ctx.fillStyle = "blue";
+                ctx.fillRect(50, 50, 100, 100);
+                ctx.strokeStyle = "black";
+                ctx.strokeRect(50, 50, 100, 100);
+            </script>
+        </section>
+
+        <hr>
+
+        <section id="iframe-example">
+            <h2>iFrame Example</h2>
+            <iframe src="https://example.com" title="Example Website" width="400" height="200"></iframe>
+        </section>
+
+        <hr>
+
+        <section id="template-demo">
+            <h2>Template Example</h2>
+            <template id="card-template">
+                <div class="card">
+                    <h3>Template Card</h3>
+                    <p>This content exists inside a template and will not render until used.</p>
+                </div>
+            </template>
+            <p>The above template is stored but not displayed.</p>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
