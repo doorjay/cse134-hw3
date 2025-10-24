@@ -12,7 +12,7 @@ body {
     font-family: var(--font-body, Arial, sans-serif);
     margin: 0;
     background: var(--color-bg, #e2f2f5);
-    color: var(--color-text, #222);
+    color: var(--color-text);
     line-height: 1.6;
 }
 
@@ -22,7 +22,7 @@ header {
     padding: var(--nav-padding);
     position: sticky;
     top: 0;
-    z-index: 100;
+
 
     .main-nav {
         display: flex;
@@ -47,6 +47,21 @@ header {
                 font-weight: 500;
                 position: relative;
                 transition: color 0.3s ease;
+
+                &.active {
+                    background-color: rgba(255, 255, 255, 0.8);
+                    color: var(--color-accent);
+                    box-shadow: 0 0 0.4rem rgba(90, 127, 214, 0.4);
+                    border-radius: 2.5rem;
+                }
+
+                &:hover, 
+                &:focus {
+                    background-color: rgba(255, 255, 255, 0.5);
+                    color: var(--color-accent);
+                    box-shadow: 0 0 0.4rem rgba(90, 127, 214, 0.2);
+                    border-radius: 2.5rem;
+                }
             }
         }
     }
@@ -55,3 +70,10 @@ header {
 
 
 
+@media (max-width: 600px) {
+    .nav-list {
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 0.6rem 1rem;
+    }
+}
