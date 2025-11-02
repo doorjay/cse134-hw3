@@ -55,7 +55,7 @@ header {
     padding: var(--nav-padding);
     position: sticky;
     top: 0;
-
+    z-index: 10;
 
     nav {
         display: flex;
@@ -69,39 +69,59 @@ header {
             padding: 0.4rem 0.8rem;
             margin: 0;
 
-            background: rgba(255, 255, 255, 0.5);
+            background: color-mix(in oklab, white 70%, var(--lavender) 30%);
             border-radius: 2.5rem;
             backdrop-filter: blur(12px);
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--shadow);
 
-            a {
+            li a {
                 text-decoration: none;
                 color: var(--color-text);
                 font-weight: 500;
-                padding: 0.25rem 1rem;
-                position: relative;
-                transition: color 0.3s ease;
+                padding: 0.4em 1em;
+                border-radius: 2rem;
+
 
                 &.active {
                     background-color: rgba(255, 255, 255, 0.8);
                     color: var(--color-accent);
-                    box-shadow: 0 0 0.4rem rgba(90, 127, 214, 0.4);
-                    border-radius: 2.5rem;
+                    box-shadow: var(--shadow);
                 }
 
                 &:hover, 
                 &:focus {
                     background-color: rgba(255, 255, 255, 0.5);
                     color: var(--color-accent);
-                    box-shadow: 0 0 0.4rem rgba(90, 127, 214, 0.2);
-                    border-radius: 2.5rem;
+                    box-shadow: var(--shadow);
                 }
             }
         }
     }
 }
  
+#theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
 
+    width: 2.2rem;
+    height: 2.2rem;
+
+    appearance: none;
+    border-radius: 50%;
+    background: color-mix(in oklab, var(--mint), var(--lavender) 50%);
+    border: 2px solid color-mix(in oklab, var(--color-text), white 30%);
+    box-shadow: var(--shadow);
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:checked {
+        background: color-mix(in oklab, var(--mauve), var(--lavender) 40%);
+        border-color: color-mix(in oklab, var(--accent), white 40%);
+    }
+}
 
 
 @media (max-width: 600px) {
