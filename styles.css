@@ -9,12 +9,30 @@
     --mauve: #E6B1FA;
 
     --color-bg: linear-gradient(135deg, var(--mint), var(--cream), var(--lavender));
-    --color-text: black;
-    --color-accent: #5a7fd6; 
+    --color-text: oklch(25% 0.04 200);
+    --color-accent: var(--mint); 
     --nav-padding: 1.2rem;
     --nav-gap: 2rem;
     --font-body: "Manrope", "Segoe UI", system-ui, sans-serif;
+
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --transition: 0.3s ease;
 }
+
+
+/* Dark mode */
+body:has(#theme-toggle:checked) {
+  --mint: #456c8b;
+  --light-green: #364c70;
+  --cream: #453561;
+  --lavender: #2a1a3b;
+  --mauve: #562f75;
+
+  --color-accent: color-mix(in oklab, var(--mauve), white 20%);
+  --color-text: oklch(90% 0.02 270);
+  --color-bg: linear-gradient(135deg, var(--mint), var(--cream), var(--lavender));
+}
+
 
 /* Fallbacks */
 body {
@@ -23,6 +41,13 @@ body {
     background: var(--color-bg, #e2f2f5);
     color: var(--color-text);
     line-height: 1.6;
+    transition: background var(--transition), color var(--transition);
+}
+
+/* Smooth transitions for theme change */
+*, *::before, *::after {
+    transition: background var(--transition), color var(--transition), border var(--transition);
+    box-sizing: border-box;
 }
 
 /* Header and Nav */
