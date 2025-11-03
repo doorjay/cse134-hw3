@@ -106,14 +106,14 @@ header {
  
 #theme-toggle {
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    inset: 1rem 1rem auto auto;
 
     width: 2.2rem;
     height: 2.2rem;
 
     appearance: none;
     border-radius: 50%;
+    z-index: 20;
     background: color-mix(in oklab, var(--mint), var(--lavender) 50%);
     border: 2px solid color-mix(in oklab, var(--color-text), white 30%);
     box-shadow: var(--shadow);
@@ -170,6 +170,11 @@ form {
     }
 }
 
+
+footer {
+    text-align: center;
+    padding: 1rem;
+}
 
 @media (max-width: 600px) {
     .nav-list {
