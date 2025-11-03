@@ -64,7 +64,7 @@ header {
         transition: var(--transition);
 
         &:hover {
-            transform: translateY(-3px);
+            transform: translateY(3px);
         }
 
         ul {
@@ -183,16 +183,22 @@ main {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            gap: 4rem;
 
             img {
-                width: 50%;
+                width: 40%;
                 border-radius: 2rem;
                 animation: float 10s ease-in-out infinite;
+            }
+
+            figcaption {
+                font-size: 2rem;
             }
         }
 
         h1 {
             font-size: 8vw;
+            margin: 0;
         }
     }
 
