@@ -61,6 +61,11 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: var(--transition);
+
+        &:hover {
+            transform: translateY(-3px);
+        }
 
         ul {
             display: flex;   
@@ -120,6 +125,48 @@ header {
     &:checked {
         background: color-mix(in oklab, var(--mauve), var(--lavender) 40%);
         border-color: color-mix(in oklab, var(--accent), white 40%);
+    }
+}
+
+
+
+article {
+    margin: 1.5rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
+}
+
+
+
+form {
+    display: grid;
+    gap: 0.8rem;
+
+    input,
+    textarea {
+        padding: 0.6em 0.8em;
+        border: 1px solid color-mix(in oklab, var(--color-text), white 70%);
+        border-radius: 0.6rem;
+        font: inherit;
+    }
+
+    button {
+        background: var(--mint);
+        color: white;
+        border: none;
+        border-radius: 0.6rem;
+        padding: 0.6em 1em;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color var(--transition), transform var(--transition);
+
+        &:hover {
+        background-color: var(--color-text);
+        transform: translateY(-3px);
+        }
     }
 }
 
