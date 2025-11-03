@@ -129,7 +129,6 @@ header {
 }
 
 
-
 article {
     margin: 1.5rem;
     background: rgba(255, 255, 255, 0.3);
@@ -138,7 +137,6 @@ article {
     box-shadow: var(--shadow);
     transition: transform var(--transition);
 }
-
 
 
 form {
@@ -170,6 +168,37 @@ form {
     }
 }
 
+main {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem 4dvw;
+
+    #intro {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        figure {
+            margin: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            img {
+                width: 50%;
+                border-radius: 2rem;
+                animation: float 10s ease-in-out infinite;
+            }
+        }
+
+        h1 {
+            font-size: 8vw;
+        }
+    }
+
+
+
+}
 
 footer {
     text-align: center;
@@ -182,4 +211,9 @@ footer {
         gap: 0;
         padding: 0.6rem 1rem;
     }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
 }
