@@ -5,7 +5,7 @@
     --mint: #3eb489;
     --light-green: #98fb98;
     --cream: #EBF5B8;
-    --lavender: #DDD6F5;
+    --lavender: #c8ace2;
     --mauve: #E6B1FA;
 
     --color-bg: linear-gradient(135deg, var(--mint), var(--cream), var(--lavender));
@@ -24,7 +24,7 @@
 body:has(#theme-toggle:checked) {
   --mint: #456c8b;
   --light-green: #364c70;
-  --cream: #453561;
+  --cream: #672674;
   --lavender: #2a1a3b;
   --mauve: #562f75;
 
@@ -138,35 +138,45 @@ article {
     transition: transform var(--transition);
 }
 
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
 
-form {
-    display: grid;
-    gap: 0.8rem;
-
-    input,
-    textarea {
-        padding: 0.6em 0.8em;
-        border: 1px solid color-mix(in oklab, var(--color-text), white 70%);
-        border-radius: 0.6rem;
-        font: inherit;
+    legend {
+        font-weight: 700;
+        margin-bottom: 2rem;
     }
 
-    button {
-        background: var(--mint);
-        color: white;
-        border: none;
-        border-radius: 0.6rem;
-        padding: 0.6em 1em;
-        cursor: pointer;
-        font-weight: 600;
-        transition: background-color var(--transition), transform var(--transition);
+    form {
+        display: grid;
 
-        &:hover {
-        background-color: var(--color-text);
-        transform: translateY(-3px);
+        input,
+        textarea {
+            padding: 0.6em 0.8em;
+            border: 1px solid color-mix(in oklab, var(--color-text), white 70%);
+            border-radius: 0.6rem;
+            font: inherit;
+        }
+
+        button {
+            background: var(--mint);
+            color: white;
+            border: none;
+            border-radius: 0.6rem;
+            padding: 0.6em 1em;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color var(--transition), transform var(--transition);
+
+            &:hover {
+            background-color: var(--color-text);
+            transform: translateY(-3px);
+            }
         }
     }
 }
+
 
 main {
     display: grid;
