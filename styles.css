@@ -213,6 +213,7 @@ main {
                 box-shadow: var(--shadow);
                 object-fit: cover;
                 object-position: center;
+                animation: float 10s ease-in-out infinite;
             }
 
             figcaption {
