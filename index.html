@@ -31,11 +31,18 @@
         <section id="intro"> 
             <h1>Hi. I'm Dorjé.</h1>
             <figure>
-                <img 
-                    src="images/profile.jpg" 
-                    alt="Photo of Dorjé Pradhan"
-                    width="200"
-                >
+                <picture>
+                    <source
+                        srcset="images/Profile-small.jpg 480w, images/Profile-medium.jpg 800w, images/Profile.jpg 1440w"
+                        type="image/jpg"
+                    >
+                    <img
+                        src="images/Profile.jpg"
+                        alt="Portrait of Dorjé Pradhan"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </picture>
                 <figcaption>
                     Hi there, I'm Dorjé Pradhan! Welcome to my website.
                     <br><br>I want to build clean, creative, and efficient websites. 

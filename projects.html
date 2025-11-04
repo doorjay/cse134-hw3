@@ -39,11 +39,22 @@
         <section id="project-list">
             <h1>Projects</h1>
             <article>
-                <img 
-                    src="images/project1.webp" 
-                    alt="Image of my first project."
-                    width="200"
-                >
+                <picture>
+                    <source
+                        srcset="
+                            images/project1-small.jpg 480w,
+                            images/project1.jpg 800w"
+                        sizes="(max-width: 700px) 90vw, 200px"
+                        type="image/jpeg"
+                    >
+
+                    <img
+                        src="images/project1-small.jpg"
+                        alt="A photo of project 1"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </picture>
                 <h2>Example Project 1</h2>
                 <p>
                     A <strong>responsive</strong> website built with <em>HTML</em>,
@@ -61,11 +72,21 @@
             <hr>
 
             <article>
-                <img 
-                src="images/project2.jpg" 
-                alt="Image of my second project."
-                width="200"
-                >
+                <picture>
+                    <source
+                        srcset="
+                            images/project2-small.jpg 480w,
+                            images/project2.jpg 800w"
+                        sizes="(max-width: 700px) 90vw, 200px"
+                        type="image/jpeg"
+                    >
+                    <img
+                        src="images/project2-small.jpg"
+                        alt="A photo of project 2"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </picture>
                 <h2>Example Project 2</h2>
                 <p>
                     An example description of my second project that will go here.
@@ -80,11 +101,21 @@
             <hr>
 
             <article>
-                <img 
-                src="images/project3.jpg" 
-                alt="Image of my third project."
-                width="200"
-                >
+                <picture>
+                    <source
+                        srcset="
+                            images/project3-small.jpg 480w,
+                            images/project3.jpg 800w"
+                        sizes="(max-width: 700px) 90vw, 200px"
+                        type="image/jpeg"
+                    >
+                    <img
+                        src="images/project3-small.jpg"
+                        alt="A photo of project 3"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </picture>
                 <h2>Example Project 3</h2>
                 <p>
                     An example description of my third project that will go here.
