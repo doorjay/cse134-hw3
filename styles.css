@@ -29,7 +29,7 @@ body:has(#theme-toggle:checked) {
   --mauve: #562f75;
 
   --color-accent: color-mix(in oklab, var(--mauve), white 20%);
-  --color-text: oklch(90% 0.02 270);
+  --color-text: oklch(95.233% 0.00843 271.332);
   --color-bg: linear-gradient(135deg, var(--mint), var(--cream), var(--lavender));
 }
 
@@ -85,7 +85,7 @@ header {
                 font-weight: 500;
                 padding: 0.4em 1em;
                 border-radius: 2rem;
-
+                transition: color 0.3s ease;
 
                 &.active {
                     background-color: rgba(255, 255, 255, 0.8);
